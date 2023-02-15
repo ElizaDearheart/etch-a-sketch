@@ -1,9 +1,9 @@
 //16X16 divs
 function createDiv() {
-    let divBoard = document.createElement('div');
+    let divBoard = document.createElement('new-div');
 
     divBoard.className = "new-div";
-    divBoard.textContent = "new div here!";
+    divBoard.textContent = "x";
 
     return divBoard;
 }
