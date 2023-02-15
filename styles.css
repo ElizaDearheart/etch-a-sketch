@@ -19,21 +19,21 @@ body {
 }
 
 #container {
-    display: block;
-    max-width: 1000px;
-    min-width: 1000px;
+    border-style: solid;
+    border-width: 1px;
+    width: 30em;
+    height: 30em;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
 }
 
-.new-div {
-    display: inline-block;
-    /*border-style: solid;
-    border-width: 1px;*/
-    width: 60px;
-    height: 60px;
-    margin: 0 auto;
+.square {
+    border-style: solid;
+    border-width: 1px;
 }
 
-.new-div:hover {
+.square:hover {
     background-color: plum;
 }

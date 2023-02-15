@@ -1,5 +1,5 @@
 //16X16 divs
-function createDiv() {
+/*function createDiv() {
     let divBoard = document.createElement('new-div');
 
     divBoard.className = "new-div";
@@ -23,3 +23,18 @@ function createAndModifyDivs() {
 
 }
 createAndModifyDivs();
+*/
+let container = document.getElementById('container');
+let gridSize = prompt("Please enter the grid size you would like:");
+
+function makeGrid(userInput) {
+    container.style.setProperty('--grid-rows', userInput);
+    container.style.setProperty('--grid-cols', userInput);
+    for (i = 0; i < userInput * userInput; i++) {
+        let square = document.createElement('div')
+        square.classList.add('square')
+        container.appendChild(square)
+    }
+}
+
+makeGrid(gridSize)
