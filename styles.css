@@ -33,3 +33,7 @@ body {
     height: 60px;
     margin: 0 auto;
 }
+
+.new-div:hover {
+    background-color: plum;
+}
