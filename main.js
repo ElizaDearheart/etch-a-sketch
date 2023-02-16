@@ -13,7 +13,7 @@ function makeGrid(userInput) {
     }
     for (const square of container.children) {
         square.addEventListener("mouseenter", (event) => {
-            event.target.style.color = "pink";
+            event.target.style.backgroundColor = "pink";
         })
     }
 
