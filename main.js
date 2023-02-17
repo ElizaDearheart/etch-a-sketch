@@ -12,6 +12,8 @@ function getUserInput() {
             alert("Please enter a number.");
         } else if (value === Number(0)) {
             alert("Please enter a number greater than 0.");
+        } else if (value > Number(200)) {
+            alert("Please enter a number less than 200.")
         } else {
             return value;
         }
