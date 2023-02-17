@@ -4,10 +4,11 @@ let allSquares = document.getElementsByName('square');
 // Take user input for grid size
 function getUserInput() {
     let userInput;
-    while (true) {
-        userInput = prompt("Please enter the grid size you would like:")
+    while (userInput = prompt("Please enter the grid size you would like:")) {
         value = parseInt(userInput)
-        if (Number.isNaN(value)) {
+        if (value === null) {
+            break;
+        } else if (Number.isNaN(value)) {
             alert("Please enter a number.");
         } else if (value === Number(0)) {
             alert("Please enter a number greater than 0.");
