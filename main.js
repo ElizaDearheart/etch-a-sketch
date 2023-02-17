@@ -1,26 +1,27 @@
-// Take user input for grid size
 let container = document.getElementById('container');
 let allSquares = document.getElementsByName('square');
 
+// Take user input for grid size
 function getUserInput() {
-    let userInput = prompt("Please enter the grid size you would like:");
-    return userInput
-    /*
-    if (userInput !== Number) {
-        alert("Please enter a number.");
-        getUserInput();
-    } else {
-        return userInput
-    }*/
+    let userInput;
+    while (userInput = prompt("Please enter the grid size you would like:")) {
+        if (isNaN(userInput)) {
+            alert("Please enter a number.");
+        } else {
+            return parseInt(userInput)
+        }
+    }
 }
 
 function makeGrid(userInput) {
+    //clear previous child nodes
     toDrawButton.addEventListener('click', function () {
         let element = document.getElementById('container');
         while (element.firstChild) {
             element.removeChild(element.firstChild);
         }
     });
+    //create grid from user input
     toDrawButton.addEventListener('click', function () {
         userInput = getUserInput()
 
